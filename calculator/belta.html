@@ -1,0 +1,48 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<button onclick="numbers()"> on click me</button>
+
+
+
+
+		<script>
+		function numbers() {
+		var a,b,c,answer,delta,z;
+		a=prompt("enter the first integer");
+		b=prompt("enter the second integer");
+		c=prompt("enter the third integer");
+        z=2*a;
+        delta=b*b-4*a*c;
+
+        var x1,x2;
+        	x1=-b+(math.sqrt(delta)/z);
+        	x2=-b-(math.sqrt(delta)/z);
+
+        if (delta>0) {
+        	
+
+        	document.write("the root of x1 is:",x1);
+        	document.write("the root of x2 is:",x2);
+       
+       }
+       else if (delta==0) {
+       	x1=-b/z;
+       	x2=-b/z;
+       	document.write("the root of x1 is:",x1);
+       	document.write("the root of x2 is:",x2);
+       }
+
+       else{
+       	document.write("there is no real root");
+       }
+
+       }
+	</script>
+	
+	</body>
+	</html>
