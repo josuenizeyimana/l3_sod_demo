@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculater.com</title>
+	<style>
+		.header{
+			text-align: center;
+			position: absolute;
+			left: 400px;
+			color: orange;
+		
+			
+		}
+	body{
+		background-color: grey;
+	}
+	
+	table{
+		width: 400px;
+		height: 280px;
+       background-color: black;
+       border-radius: 2px;
+	}
+	input{
+		width: 100px;
+		height: 60px;
+		font-size: 17px;
+		border-radius:2px;
+		border:2px solid black;
+		font-size: 26px;
+
+
+	}
+	input:hover{
+		background-color: pink;
+	
+	}
+	.iniputi{
+		width:526px;
+		height: 50px; 
+		font-size: 25px;
+		background-color: white;
+		font-weight: bold;
+	}
+	.iniputi:hover{
+		background-color: white;
+	}
+	.class{
+		width: 200px;
+		font-size: 50px;
+	}
+	form{
+		font-weight: bold;
+		background-color:pink;
+		width: 700px;
+		height:450px;
+		border-radius: 20px;
+
+
+	}
+	h2{
+		font-size: 40px;
+
+	}
+	.classi{
+		font-size: 40px;
+	}
+
+	</style>
+</head>
+<body>
+
+	<div class="header">
+	<marquee direction="right"><h1>Simple Calculator</h1></marquee>
+      </div>
+      <br><br><br>
+     <center>
+    <form>
+    	<h2>Calculator</h2>
+	<table border="1 ">
+	
+			<input type="" name="mana" id="number"class="iniputi" placeholder="00">
+
+		 <tr>
+		 	<td><input type="button" value="7" onclick="number.value +='7'"></td>
+		 	<td><input type="button" value="8" onclick="number.value +='8'"></td>
+		 	<td><input type="button" value="9" onclick="number.value +='9'"></td>
+		 	<td><input type="button" value="/" onclick="number.value +='/'"></td>
+		 	<td><input type="button" value="-" onclick="number.value +='-'" class="classi"></td>
+		 </tr>
+
+		  <tr>
+		 	<td><input type="button" value="4" onclick="number.value +='4'"></td>
+		 	<td><input type="button" value="5" onclick="number.value +='5'"></td>
+		 	<td><input type="button" value="6" onclick="number.value +='6'"></td>
+		 	<td><input type="button" value="*" onclick="number.value +='*'"></td>
+		 	<td><input type="button" value="+" onclick="number.value +='+'"></td>
+
+		 </tr>
+
+		  <tr>
+		 	<td><input type="button" value="1" onclick="number.value +='1'"></td>
+		 	<td><input type="button" value="2" onclick="number.value +='2'"></td>
+		 	<td><input type="button" value="3" onclick="number.value +='3'"></td>
+		 	<td><input type="button" value="."  onclick="number.value +='.'" style="font-size: 30px;"></td>
+		 	<td><input type="button" value="%" onclick="number.value=number.value/100"></td>
+		 </tr>
+		 <tr>
+		 	<td><input type="button" value="0" onclick="number.value +='0'"></td>
+		 	<td><input type="button" value="=" onclick="number.value=eval(number.value)"></td>
+		 	<td><input type="button" value="Sqrt" onclick="number.value=Math.sqrt(number.value)"></td>
+		 	<td><input type="button" value="delete" onclick="number.value ='0'"></td>
+		 	<td><input type="button" value="delta" onclick="numbers()"></td>
+		 	
+		 </tr>
+		
+	</table>
+	</form>
+	</center>
+
+
+
+	<script>
+		function numbers() {
+		var a,b,c,answer,delta,z;
+		a=prompt("Enter the first integer from your keyboard");
+		b=prompt("Enter the second integer from your keyboard");
+		c=prompt("Enter the third integer from your keyboard");
+        z=b/2*a;
+        delta=b*b-4*a*c;
+        if (delta>=0) {
+        	var x1,x2;
+        	x1=(-b+(Math.sqrt(delta)/z));
+        	x2=(-b-(Math.sqrt(delta)/z));
+
+        	document.getElementById('number').value="Delta of x1 is "+x1+" and x2 is "+x2;
+       }
+       else if (delta==0) {
+       	x1=-b/z;
+       	x2=-b/z;
+        document.getElementById('number').value="Delta of x1 is "+x1+" and x2 is "+x2;
+       }
+
+       else{
+        document.getElementById('number').value="there is no real root ";
+       	
+       }
+
+       }
+	</script>
+
+</body>
+</html>
